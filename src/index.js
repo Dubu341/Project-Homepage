@@ -1,4 +1,1 @@
-function sum(a, b) {
-  return a + b;
-}
-export default sum;
+import styles from "./styles.css";
