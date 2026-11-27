@@ -42,12 +42,9 @@ header::before {
 
 .header-wrapper {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
   align-items: center;
   justify-content: center;
-  align-self: center;
-  justify-self: center;
-  /* max-width: 1200px; */
 }
 
 .aboutme-container {
@@ -216,7 +213,7 @@ footer {
 @media (max-width: 600px) {
   .header-wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
   }
   .photo-container {
     float: none;
