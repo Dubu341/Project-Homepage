@@ -68,11 +68,12 @@ header::before {
 .photo-container {
   position: relative;
   box-shadow: 2px 2px 17px -8px #212020;
+  max-width: 350px;
 }
 
 .header-pic {
   display: block;
-  max-width: 350px;
+  width: 100%;
 }
 
 .name {
@@ -98,7 +99,7 @@ main {
 .card-container {
   padding: 15px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
 }
 .card {
@@ -156,7 +157,7 @@ footer {
 }
 
 .footer-wrapper div p {
-  width: 40ch;
+  max-width: 40ch;
 }
 .footer-wrapper h2 {
   color: black;
@@ -180,7 +181,15 @@ footer {
   width: 30px;
 }
 @media (max-width: 600px) {
-  header {
+  .header-wrapper {
     grid-template-columns: 1fr;
   }
 }
+/* @media (max-width: 1000px) {
+  .header-wrapper {
+    grid-template-columns: 1fr;
+  }
+   .header-pic {
+    float: right;
+  } 
+} */
