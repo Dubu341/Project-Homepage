@@ -94,6 +94,9 @@ main {
   max-width: 1200px;
   margin: auto;
 }
+main h2 {
+  margin-left: 15px;
+}
 .card-container {
   padding: 15px;
   display: grid;
@@ -142,6 +145,7 @@ footer {
 }
 .footer-image {
   width: 500px;
+  height: auto;
 }
 .footer-wrapper {
   padding: 20px;
@@ -204,7 +208,11 @@ footer {
     white-space: nowrap;
   }
 }
-
+@media (max-width: 700px) {
+  .footer-image {
+    width: 350px;
+  }
+}
 @media (max-width: 600px) {
   .header-wrapper {
     display: grid;
@@ -231,6 +239,15 @@ footer {
     left: 10px;
     font-size: 4.7rem;
     white-space: wrap;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-image {
+    display: none;
+  }
+  .footer-wrapper {
+    grid-template-columns: 1fr;
   }
 }
 
