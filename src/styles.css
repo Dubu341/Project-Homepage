@@ -29,7 +29,7 @@ p {
 header {
   position: relative;
   isolation: isolate;
-  padding: 4rem 2rem 6rem;
+  padding: 3rem 2rem 2rem;
 }
 header::before {
   content: "";
