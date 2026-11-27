@@ -10,17 +10,31 @@
 }
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-display: swap;
+}
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  max-width: 65ch;
+  color: #333;
 }
 
 header {
   position: relative;
   isolation: isolate;
   padding: 4rem 2rem 6rem;
-  /* width: 100%; */
-  display: grid;
-  grid-template-columns: auto 600px;
-  align-items: center;
-  justify-content: center;
 }
 header::before {
   content: "";
@@ -29,6 +43,16 @@ header::before {
   z-index: -1;
   background: #118ab2;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 95%);
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  /* max-width: 1200px; */
 }
 
 .aboutme-container {
@@ -85,7 +109,9 @@ main {
 }
 .project-image {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 300px;
 }
 
@@ -110,7 +136,7 @@ main {
 /* footer */
 .footer-wrapper p {
   margin: 0;
-  color: white;
+  color: black;
 }
 footer {
   background-color: #118ab2;
@@ -133,7 +159,7 @@ footer {
   width: 40ch;
 }
 .footer-wrapper h2 {
-  color: white;
+  color: black;
 }
 .contact-details div {
   display: grid;
@@ -149,9 +175,7 @@ footer {
 .contact-details div img {
   width: 20px;
 }
-.contact-details .icon {
-  filter: brightness(0) invert(1);
-}
+
 .links a img {
   width: 30px;
 }

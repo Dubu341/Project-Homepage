@@ -4,44 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
+    <link rel="preload" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <header>
-      <div class="photo-container">
-        <picture>
-          <source
-            srcset="../images/medium-duck.jpg"
-            media="(min-width: 1000px)"
-          />
-          <source srcset="../images/small-duck.jpg" />
-          <img
-            class="header-pic"
-            src="../images/medium-duck.jpg"
-            alt="my selfie"
-          />
-        </picture>
-        <p class="name">Cool Duck</p>
-      </div>
-
-      <div class="aboutme-container">
-        <h3>About me</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          excepturi quae suscipit similique ex officiis perferendis, laboriosam
-          sit harum minus fugiat rerum voluptatibus sapiente inventore voluptate
-          rem quod, reiciendis earum.
-        </p>
-        <div class="aboutme-icon">
-          <a
-            href="https://github.com/Dubu341"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div class="header-wrapper">
+        <div class="photo-container">
+          <picture>
+            <source
+              srcset="../images/medium-duck.jpg"
+              media="(min-width: 1000px)"
+            />
+            <source srcset="../images/small-duck.jpg" />
             <img
-              class="icon"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              alt="github profile (opens in new tab)"
-          /></a>
+              fetchpriority="high"
+              class="header-pic"
+              src="../images/medium-duck.jpg"
+              alt="my selfie"
+            />
+          </picture>
+          <p class="name">Cool Duck</p>
+        </div>
+
+        <div class="aboutme-container">
+          <h3>About me</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            excepturi quae suscipit similique ex officiis perferendis,
+            laboriosam sit harum minus fugiat rerum voluptatibus sapiente
+            inventore voluptate rem quod, reiciendis earum.
+          </p>
+          <div class="aboutme-icon">
+            <a
+              href="https://github.com/Dubu341"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                alt="github profile (opens in new tab)"
+            /></a>
+          </div>
         </div>
       </div>
     </header>
