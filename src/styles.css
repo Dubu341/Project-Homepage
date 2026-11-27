@@ -29,7 +29,7 @@ p {
 header {
   position: relative;
   isolation: isolate;
-  padding: 3rem 2rem 2rem;
+  padding: 3rem 2rem 6rem;
 }
 header::before {
   content: "";
@@ -90,6 +90,7 @@ header::before {
 main {
   max-width: 1200px;
   margin: auto;
+  margin-top: -50px;
 }
 main h2 {
   margin-left: 15px;
