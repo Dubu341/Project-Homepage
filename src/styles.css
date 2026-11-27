@@ -126,6 +126,7 @@ main h2 {
   gap: 10px;
 }
 .card-links img {
+  display: block;
   width: 25px;
 }
 .card p {
