@@ -2,9 +2,6 @@
   width: 30px;
 }
 
-/* img {
-  width: 300px;
-} */
 * {
   box-sizing: border-box;
 }
@@ -13,7 +10,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 h1,
@@ -22,7 +18,6 @@ h3 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   letter-spacing: -0.01em;
-  font-display: swap;
 }
 p {
   font-size: 1.125rem;
@@ -73,17 +68,20 @@ header::before {
 
 .header-pic {
   display: block;
-  width: 100%;
+  width: 350px;
+  height: auto;
 }
 
 .name {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.01em;
+  font-display: swap;
   position: absolute;
   bottom: 10px;
-  left: 120px;
+  left: 100px;
   margin: 0;
   color: white;
   font-size: 2rem;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 .aboutme-icon {
   text-align: right;
@@ -180,16 +178,70 @@ footer {
 .links a img {
   width: 30px;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 1025px) {
   .header-wrapper {
-    grid-template-columns: 1fr;
+    display: block;
+    display: flow-root;
+  }
+  .photo-container {
+    float: left;
+    margin-right: 15px;
+  }
+  .aboutme-container {
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 55px;
+  }
+  .aboutme-container h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .name {
+    top: 0px;
+    left: 220px;
+    font-size: 3.7rem;
+    white-space: nowrap;
   }
 }
-/* @media (max-width: 1000px) {
+
+@media (max-width: 600px) {
   .header-wrapper {
+    display: grid;
     grid-template-columns: 1fr;
   }
-   .header-pic {
-    float: right;
-  } 
-} */
+  .photo-container {
+    float: none;
+    margin-right: 0;
+    position: relative;
+  }
+  .aboutme-container {
+    background: none;
+    padding: 5px 5px 5px 15px;
+    box-shadow: none;
+    margin-top: 0px;
+    margin-left: 0px;
+    max-width: 350px;
+  }
+  header::before {
+    clip-path: polygon(100% 0%, 100% 20%, 0% 61%, 0% 0%);
+  }
+  .name {
+    top: 300px;
+    left: 10px;
+    font-size: 4.7rem;
+    white-space: wrap;
+  }
+}
+
+@media (max-width: 415px) {
+  .photo-container {
+    box-shadow: none;
+  }
+  .name {
+    color: black;
+    position: unset;
+    font-size: 3rem;
+    text-align: center;
+  }
+}
